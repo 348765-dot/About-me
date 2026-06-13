@@ -3,222 +3,90 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alice Wang | Student Introduction</title>
+  <title>Alice Wang | Rainbow Claw Quest</title>
   <meta
     name="description"
-    content="Personal introduction website for Alice Wang, a student interested in games, creativity, and technology."
+    content="A rainbow claw machine game where hidden task prizes are revealed when players grab stuffed animals."
   >
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;700;800&display=swap"
     rel="stylesheet"
   >
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="page-shell">
-    <header class="hero">
-      <nav class="nav">
-        <a class="brand" href="#top">Alice Wang</a>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
-          Menu
-        </button>
-        <div class="nav-links" id="site-menu">
-          <a href="#favorites">Favorites</a>
-          <a href="#interests">Interests</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
-        </div>
-      </nav>
+  <main class="game-page">
+    <section class="machine-panel" aria-labelledby="game-title">
+      <div class="intro-strip">
+        <p class="kicker">Rainbow Claw Quest</p>
+        <h1 id="game-title">Grab a mystery prize. Reveal a tiny win.</h1>
+        <p>
+          For busy players who want a fast arcade thrill, each stuffed prize hides a short task.
+          Catch one, reveal it, and finish with a small sense of accomplishment.
+        </p>
+      </div>
 
-      <section class="hero-content" id="top">
-        <div class="hero-copy">
-          <p class="eyebrow">Student / Game Fan / Creative Thinker</p>
-          <h1>Alice Wang</h1>
-          <p class="lead">
-            I'm a student who enjoys games with beautiful worlds, expressive characters,
-            and moments that make people feel connected. Some of my favorites are
-            Hatsune Miku: Colorful Stage!, Sky: Children of the Light, and Genshin Impact.
-          </p>
-          <div class="hero-actions">
-            <a class="button primary" href="#favorites">My Favorite Games</a>
-            <a class="button secondary" href="#contact">Contact Me</a>
+      <div class="game-layout">
+        <section class="claw-machine" aria-label="Playable rainbow claw machine">
+          <div class="machine-header">
+            <span>Prize Bay</span>
+            <span class="attempts" id="attemptsText">0 grabs</span>
           </div>
-        </div>
-        <aside class="hero-visual">
-          <img src="pic.png" alt="Portrait-style illustration used as Alice Wang's introduction image">
-          <div class="hero-card">
-            <p class="card-label">Quick Snapshot</p>
-            <ul>
-              <li>Student exploring future career paths</li>
-              <li>Interested in games, creativity, and technology</li>
-              <li>Drawn to art direction, music, story, and community</li>
-            </ul>
-          </div>
-        </aside>
-      </section>
-    </header>
 
-    <main>
-      <section class="section projects" id="favorites">
-        <div class="section-heading">
-          <p class="eyebrow">Favorite Games</p>
-          <h2>Games I enjoy playing</h2>
-          <p>
-            These games stand out to me because they combine style, atmosphere, music, and memorable worlds.
-          </p>
-        </div>
-
-        <div class="project-grid">
-          <article class="project-card reveal">
-            <div class="project-art">
-              <img src="初音未来.jpg" alt="Hatsune Miku: Colorful Stage themed image">
-            </div>
-            <div class="project-body">
-              <div class="project-topline">
-                <span>Rhythm Game</span>
-                <span>Music / Characters</span>
-              </div>
-              <h3>Hatsune Miku: Colorful Stage!</h3>
-              <p>
-                I like how it blends rhythm gameplay with character stories, bright visual style,
-                and music that makes each session feel energetic.
-              </p>
-              <ul class="project-notes">
-                <li>Favorite parts: music, events, and character groups</li>
-                <li>Shows my interest in creative communities</li>
-                <li>Inspires me with its polished visual presentation</li>
-              </ul>
-              <div class="project-links">
-                <a href="https://www.colorfulstage.com/" target="_blank" rel="noreferrer">Official Site</a>
+          <div class="glass" id="playArea">
+            <div class="shine"></div>
+            <div class="rail">
+              <div class="claw-unit" id="claw">
+                <div class="cable"></div>
+                <div class="claw-head"></div>
+                <div class="claw-arm left"></div>
+                <div class="claw-arm right"></div>
               </div>
             </div>
-          </article>
-
-          <article class="project-card reveal">
-            <div class="project-art">
-              <img src="光遇.jpg" alt="Sky: Children of the Light themed image">
-            </div>
-            <div class="project-body">
-              <div class="project-topline">
-                <span>Adventure</span>
-                <span>Exploration / Community</span>
-              </div>
-              <h3>Sky: Children of the Light</h3>
-              <p>
-                I enjoy its peaceful atmosphere, beautiful flying, and the way it encourages players
-                to help each other without needing many words.
-              </p>
-              <ul class="project-notes">
-                <li>Favorite parts: scenery, music, and cooperation</li>
-                <li>Shows my interest in emotional design</li>
-                <li>Reminds me how small interactions can feel meaningful</li>
-              </ul>
-              <div class="project-links">
-                <a href="https://www.thatskygame.com/" target="_blank" rel="noreferrer">Official Site</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card reveal">
-            <div class="project-art">
-              <img src="原神.jpg" alt="Genshin Impact themed image">
-            </div>
-            <div class="project-body">
-              <div class="project-topline">
-                <span>Open World RPG</span>
-                <span>Exploration / Story</span>
-              </div>
-              <h3>Genshin Impact</h3>
-              <p>
-                I like exploring its regions, learning about the characters, and seeing how each
-                area has its own music, culture, and mood.
-              </p>
-              <ul class="project-notes">
-                <li>Favorite parts: worldbuilding, art, and exploration</li>
-                <li>Shows my curiosity about large creative worlds</li>
-                <li>Inspires me through detail, pacing, and atmosphere</li>
-              </ul>
-              <div class="project-links">
-                <a href="https://genshin.hoyoverse.com/" target="_blank" rel="noreferrer">Official Site</a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="section split-section" id="interests">
-        <div class="section-heading narrow">
-          <p class="eyebrow">Interests</p>
-          <h2>What I care about</h2>
-        </div>
-
-        <div class="split-grid">
-          <div class="panel reveal">
-            <h3>Topics I enjoy</h3>
-            <div class="tag-list">
-              <span>Games</span>
-              <span>Music</span>
-              <span>Storytelling</span>
-              <span>Character Design</span>
-              <span>Visual Design</span>
-              <span>Technology</span>
-              <span>Creative Communities</span>
-              <span>Worldbuilding</span>
+            <div class="prize-layer" id="prizeLayer"></div>
+            <div class="chute">
+              <span>Reveal chute</span>
             </div>
           </div>
 
-          <div class="panel reveal">
-            <h3>Personal strengths</h3>
-            <ul class="check-list">
-              <li>Curious about how creative work connects with people</li>
-              <li>Interested in learning from different kinds of media</li>
-              <li>Thoughtful about presentation, emotion, and detail</li>
-              <li>Open to exploring future opportunities in tech and creative fields</li>
-            </ul>
+          <div class="controls" aria-label="Claw controls">
+            <button class="control-button" type="button" id="leftButton" aria-label="Move claw left">Left</button>
+            <button class="grab-button" type="button" id="grabButton">Grab</button>
+            <button class="control-button" type="button" id="rightButton" aria-label="Move claw right">Right</button>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section class="section about-section" id="about">
-        <div class="section-heading">
-          <p class="eyebrow">About</p>
-          <h2>A quick introduction</h2>
-        </div>
+        <aside class="quest-panel" aria-label="Game progress">
+          <div class="score-card">
+            <p class="label">Accomplishment Meter</p>
+            <div class="meter" aria-hidden="true">
+              <span id="meterFill"></span>
+            </div>
+            <p class="score" id="scoreText">0 of 6 prizes revealed</p>
+          </div>
 
-        <div class="about-card reveal">
-          <p>
-            I'm a student interested in games because they bring together art, music, story,
-            technology, and community. I especially enjoy games that create a strong atmosphere
-            and make players feel part of a larger world.
-          </p>
-          <p>
-            This website is a simple introduction to who I am, what I enjoy, and the kinds of
-            creative experiences that catch my attention.
-          </p>
-        </div>
-      </section>
-
-      <section class="section contact-section" id="contact">
-        <div class="contact-card reveal">
-          <div>
-            <p class="eyebrow">Contact</p>
-            <h2>Let's make it easy to reach you</h2>
-            <p>
-              Update these links with your real email, LinkedIn, GitHub, or resume when you are ready.
+          <div class="revealed-card">
+            <p class="label">Latest Prize</p>
+            <h2 id="latestTitle">Mystery task waiting...</h2>
+            <p id="latestTask">
+              Move the claw, press grab, and discover the short challenge hidden inside a stuffed prize.
             </p>
           </div>
-          <div class="contact-links">
-            <a class="button primary" href="mailto:alice@example.com">Email Me</a>
-            <a class="button secondary" href="#">LinkedIn</a>
-            <a class="button secondary" href="#">GitHub</a>
-            <a class="button secondary" href="#">Resume</a>
+
+          <div class="collection-card">
+            <p class="label">Prize Collection</p>
+            <div class="collection" id="collection"></div>
           </div>
-        </div>
-      </section>
-    </main>
-  </div>
+
+          <button class="reset-button" type="button" id="resetButton">Reset Machine</button>
+        </aside>
+      </div>
+    </section>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </main>
 
   <script src="script.js"></script>
 </body>
